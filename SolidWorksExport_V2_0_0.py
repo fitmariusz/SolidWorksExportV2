@@ -1,8 +1,11 @@
-import loadingCsv
+# Version: 2.0.0
+
 import checkAndAddTheSameElements
 import generateBoomsToTxt
 import deleteCsvFile
 import argparse
+
+from loadingCsv import loadingCsv
 
 
 def parseArguments() -> str:
@@ -18,7 +21,10 @@ def parseArguments() -> str:
 
 def main():
     pathFile, directoryPath, fileName = parseArguments()
-    loadingCsv(pathFile)
+    table = loadingCsv(pathFile, fileName)
+    print(table)
+
+
     # checkAndAddTheSameElements()
     # generateBoomsToTxt()
     # deleteCsvFile()
