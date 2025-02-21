@@ -1,6 +1,9 @@
 import os
 
+import pymsgbox
 
-def deleteCsvFile(filename: str):
-    # os.remove('filename'+'csv')
-    print("delete csv file")
+
+def deleteCsvFile(filePath: str):
+    os.remove(filePath)
+    pymsgbox.alert(f"Zakończono generowanie pojedyńczych bomów", "Sukces!", timeout=5000, icon=0 )
+
