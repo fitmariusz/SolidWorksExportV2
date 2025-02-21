@@ -21,9 +21,8 @@ def testTitleLine(lineTitle: list) -> None:
             os.remove(1)
 
 
-def testQuantity(table: list) -> None:
-    table.pop(0)
-    for row in table:
+def testQuantity(tableTest: list) -> None:
+    for row in tableTest:
         if row[-1].replace(",", "").isdigit() == False:
             pymsgbox.alert(
                 f"Błędne dane w kolimnie ILOŚĆ:",
@@ -38,4 +37,4 @@ def testQuantity(table: list) -> None:
 
 def corectData(table: list) -> None:
     testTitleLine(table[0])
-    testQuantity(table)
+    testQuantity(table[1:])

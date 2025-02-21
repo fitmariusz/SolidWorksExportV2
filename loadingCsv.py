@@ -10,5 +10,4 @@ def loadingCsv(pathFile: str, filename: str) -> list:
         for row in spamreader:
             table.append(row[0].split(";"))
     corectData(table)
-    print('ok')
     return table
