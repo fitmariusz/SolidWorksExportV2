@@ -22,7 +22,7 @@ def main():
     pathFile, directoryPath, fileName = parseArguments()
     table = loadingCsv(pathFile, fileName)
     table = checkAndAddTheSameElements(table)
-    generateBomsToTxt(table,fileName, directoryPath)
+    generateBomsToTxt(table, fileName, directoryPath)
     deleteCsvFile(pathFile)
 
 

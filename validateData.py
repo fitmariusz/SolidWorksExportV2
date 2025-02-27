@@ -34,7 +34,23 @@ def testQuantity(tableTest: list) -> None:
             )
             os.remove(1)
 
+def test_index_boms(line_title: list) -> None:
+    if len(line_title) != 4:
+        lapms_list= line_title[3:-1]
+        index_list = list(map(lambda x: x.split("(")[1].split(")")[0], lapms_list))
+        unique_index_list = list(set(index_list))
+        if len(index_list) != len(unique_index_list):
+            pymsgbox.alert(
+                f"Błąd w indeksach opraw - powtarzające się indeksy: {index_list}",
+                "Nieprawidłowe dane.",
+                icon=0,
+            )
+            pymsgbox.alert(
+                "Przerwano generowanie plików...", "Uwaga", timeout=2000, icon=0
+            )
+            os.remove(1)
 
 def corectData(table: list) -> None:
     testTitleLine(table[0])
+    test_index_boms(table[0])
     testQuantity(table[1:])
