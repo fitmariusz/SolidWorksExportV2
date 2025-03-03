@@ -7,7 +7,6 @@ from generate_boms_to_txt import generate_boms_to_txt
 from loading_csv import loading_csv
 
 
-
 def parse_arguments() -> str:
     parser = argparse.ArgumentParser(
         description="Export boms from one file csv to files txt."

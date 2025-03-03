@@ -26,11 +26,13 @@ def check_and_add_the_same_elements(table: list):
         for index, data in elementSums.items()
     ]
 
+
+
     for i in range(len(newTable)):
         newTable[i].insert(0, dictionary_name_element_for_index[newTable[i][0]][0])
-
     id = 1
     for row in newTable:
+        row.pop(1)
         row.insert(0, id)
         id += 1
         if row[-1] == int(row[-1]):
