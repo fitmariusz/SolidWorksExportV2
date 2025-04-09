@@ -1,4 +1,4 @@
-def check_and_add_the_same_elements(table: list):
+def check_and_add_the_same_elements(table: list) -> list:
     tableTitle = table[0]
     tableToSearch = table[1:]
     elementSums = {}
@@ -10,10 +10,10 @@ def check_and_add_the_same_elements(table: list):
         quantity = float(
             row[-1].replace(",", ".")
         )  # Assuming mass is always the last element
-        if len(row) == 5:
-            other = []
-        else:
-            other = row[2:-1]  # All elements between name and mass
+        # if len(row) == 5:
+        #     other = []
+        # else:
+        other = row[2:-1]  # All elements between name and mass
         if index in elementSums:
             elementSums[index]["quantity"] += quantity
         else:
@@ -26,8 +26,6 @@ def check_and_add_the_same_elements(table: list):
         for index, data in elementSums.items()
     ]
 
-
-
     for i in range(len(newTable)):
         newTable[i].insert(0, dictionary_name_element_for_index[newTable[i][0]][0])
     id = 1
@@ -38,4 +36,5 @@ def check_and_add_the_same_elements(table: list):
         if row[-1] == int(row[-1]):
             row[-1] = int(row[-1])
     newTable.insert(0, tableTitle)
+
     return newTable

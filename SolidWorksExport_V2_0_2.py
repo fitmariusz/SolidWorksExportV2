@@ -23,7 +23,7 @@ def main():
     table = loading_csv(path_file, file_name)
     table = check_and_add_the_same_elements(table)
     generate_boms_to_txt(table, file_name, directory_path)
-    delete_csv_file(path_file)
+    # delete_csv_file(path_file)
 
 
 if __name__ == "__main__":

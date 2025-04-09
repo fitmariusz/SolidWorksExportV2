@@ -10,6 +10,6 @@ def generate_boms_to_txt(boms: list, file_name: str, directory_path: str):
         )
         f = open(file_path, "w", encoding="utf-8")
         for row in boms:
-            text = f"{row[0]}\t{row[1]}\t{row[2]}\t{row[3+bom]}\t{row[-1]}\n"
+            text = f"{row[0]}\t{row[1]}\t{row[3+bom]}\t{row[-1]}\n"
             f.writelines(text)
         f.close
