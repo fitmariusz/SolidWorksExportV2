@@ -2,7 +2,9 @@ Start project: 20.02.2025
 Write: Mariusz Fit
 finish project: 28.02.2025
 
-SolidWorksExport V2.0.1. -SolidWorksExport_V2_0_1.py
+SolidWorksExport V2.0.2. -SolidWorksExport_V2_0_2.py
+
+This is the second version of the script for generating a boom txt file from a csv file containing several booms. The csv files are generated from documentation in Solidworks. The next script first tests the data and then generates one boom to one file. The files receive SAP and set in the database.
 
 Operation of the application with
 

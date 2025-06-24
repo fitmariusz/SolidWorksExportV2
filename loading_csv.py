@@ -1,8 +1,5 @@
 import csv
-
 from validate_data import corect_data
-
-
 
 
 def loading_csv(path_file: str, file_name: str) -> list:

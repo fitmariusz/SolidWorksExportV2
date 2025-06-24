@@ -9,11 +9,8 @@ def check_and_add_the_same_elements(table: list) -> list:
         index = row[3]
         quantity = float(
             row[-1].replace(",", ".")
-        )  # Assuming mass is always the last element
-        # if len(row) == 5:
-        #     other = []
-        # else:
-        other = row[2:-1]  # All elements between name and mass
+        )  
+        other = row[2:-1] 
         if index in elementSums:
             elementSums[index]["quantity"] += quantity
         else:
